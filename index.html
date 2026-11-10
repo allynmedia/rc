@@ -115,6 +115,16 @@ tr:hover td{background:#fafafa;}
 @media(max-width:600px){.cap-grid{grid-template-columns:1fr;}}
 .cap-list li{font-size:14px;padding:7px 0 7px 18px;}
 .cap-list li::before{top:15px;width:6px;height:6px;}
+.agenda-list{font-size:15px;color:#333;line-height:1.6;max-width:900px;padding-left:22px;}
+.agenda-list>li{padding:12px 0;border-bottom:1px solid #f2f2f0;font-weight:700;color:var(--dark);}
+.agenda-list>li:last-child{border-bottom:none;}
+.agenda-list>li::marker{color:var(--red);font-family:var(--condensed);font-size:18px;}
+.agenda-list ol,.agenda-list ul{padding-left:22px;margin-top:6px;font-weight:400;color:#444;font-size:14.5px;}
+.agenda-list ol li,.agenda-list ul li{padding:3px 0;}
+.agenda-list ol{list-style:lower-alpha;}
+.agenda-list ol ol{list-style:lower-roman;}
+.agenda-list ol ol ol{list-style:decimal;}
+.agenda-list ol ol ol ol{list-style:disc;}
 /* Timeline */
 .timeline{list-style:none;position:relative;margin-top:8px;}
 .timeline::before{content:'';position:absolute;left:7px;top:6px;bottom:6px;width:2px;background:var(--border);}
@@ -198,7 +208,8 @@ tr:hover td{background:#fafafa;}
 
 <nav class="tab-bar" aria-label="Report sections">
   <div class="tab-list" role="tablist">
-    <button class="tab" role="tab" id="tab-overview" aria-controls="overview" aria-selected="true">Overview</button>
+    <button class="tab" role="tab" id="tab-agenda" aria-controls="agenda" aria-selected="true">Agenda</button>
+    <button class="tab" role="tab" id="tab-overview" aria-controls="overview" aria-selected="false" tabindex="-1">Overview</button>
     <button class="tab" role="tab" id="tab-pr" aria-controls="pr" aria-selected="false" tabindex="-1">PR</button>
     <button class="tab" role="tab" id="tab-digital" aria-controls="digital" aria-selected="false" tabindex="-1">Digital</button>
     <button class="tab" role="tab" id="tab-development" aria-controls="development" aria-selected="false" tabindex="-1">Development</button>
@@ -209,8 +220,152 @@ tr:hover td{background:#fafafa;}
 
 <main class="report-body">
 
+<!-- ============ AGENDA ============ -->
+<section class="tab-panel" id="agenda" role="tabpanel" aria-labelledby="tab-agenda">
+  <div class="panel-label print-only">Agenda</div>
+  <div class="report-section">
+    <div class="section-number">Agenda &middot; November 10, 2026</div>
+    <div class="section-title">Resource Center and Allyn: Communications and Development Priorities 2027</div>
+    <ol class="agenda-list">
+      <li>Welcome and introductions</li>
+      <li>Review of 2026 successes</li>
+      <li>Discussion
+        <ol>
+          <li>What went well?</li>
+          <li>What do we want to improve?</li>
+          <li>What do we want to do more of?</li>
+        </ol>
+      </li>
+      <li>Planning for 2027
+        <ol>
+          <li>Communications
+            <ol>
+              <li>PR
+                <ol>
+                  <li>Promoting Christopher Wagley as the new leader
+                    <ol><li><em>DBJ</em> People on the Move; <em>D CEO</em> personnel moves</li><li>Op-eds</li><li>Interviews on current issues</li></ol>
+                  </li>
+                  <li>Spanish media: RC Spanish-language spokesperson
+                    <ol><li>Could connect to the digital ad plan to attract more Spanish-speaking people</li></ol>
+                  </li>
+                  <li>Success stories
+                    <ol><li>Recaps of Oak Lawn Place and RC Health</li></ol>
+                  </li>
+                </ol>
+              </li>
+              <li>Digital
+                <ol>
+                  <li>FY27 paid plan ($100K): Google search, Meta, community discovery (TikTok, Reels, Reddit), Simpli.fi connected TV video, direct advertising and sponsored content
+                    <ol><li>Digital donor pipeline: donor audiences, email list growth and fast follow-up on first gifts, with Development</li><li>Women's health: Dr. Rachel Rivera, MD</li></ol>
+                  </li>
+                  <li>Tracking and reporting: privacy-safe conversion tracking and a monthly dashboard, shared with Development's baseline dashboard</li>
+                  <li>Website: homepage refresh and heatmap, Media Center launch, Nutrition Center growth, ad-targeted landing pages</li>
+                </ol>
+              </li>
+              <li>Next steps</li>
+            </ol>
+          </li>
+          <li>Development
+            <ol>
+              <li>Reviewed 2027 engagement with Sonya, focused on three priorities:
+                <ol><li>Sustain and grow capital donors</li><li>Build and strengthen operational support</li><li>Build a digital new donor pipeline (in partnership with the Comms team)</li></ol>
+              </li>
+              <li>Calendar and goals</li>
+              <li>Adjustments and next steps</li>
+            </ol>
+          </li>
+        </ol>
+      </li>
+      <li>How else can Allyn support Resource Center?
+        <ol>
+          <li>Welcome event for Christopher</li>
+          <li>Video opportunities</li>
+          <li>Creative projects for stewardship</li>
+        </ol>
+      </li>
+    </ol>
+  </div>
+
+  <div class="report-section">
+    <div class="section-number">Development</div>
+    <div class="section-title">Calendar and Goals</div>
+    <div class="split">
+      <div class="data-card">
+        <div class="dc-title">November 2026 to January 2027</div>
+        <div class="dc-meta">Foundation, data and transition</div>
+        <ul class="bullets cap-list">
+          <li>Finalize the capital campaign donor database and confirm gift and pledge records.</li>
+          <li>Segment donors by giving level, history, capacity and relationship.</li>
+          <li>Identify priority capital donors for personal stewardship and annual giving cultivation.</li>
+          <li>Review annual campaign results, retention rates, acquisition sources and giving trends.</li>
+          <li>Develop preliminary annual fundraising goals, messaging and the calendar-year campaign framework.</li>
+          <li>Coordinate with Allyn Digital on audience development, campaign timing and tracking.</li>
+          <li>Review the Resource Center peer-to-peer platform and determine its role in the upcoming year.</li>
+        </ul>
+      </div>
+      <div class="data-card">
+        <div class="dc-title">February to April 2027</div>
+        <div class="dc-meta">Launch stewardship and annual giving priorities</div>
+        <ul class="bullets cap-list">
+          <li>Begin individualized cultivation plans for top capital campaign donors.</li>
+          <li>Introduce or strengthen annual operating support conversations and multi-year giving opportunities.</li>
+          <li>Implement a coordinated annual giving calendar with renewal, solicitation and stewardship touchpoints.</li>
+          <li>Launch or test targeted digital acquisition and email list growth initiatives.</li>
+          <li>Develop a process for prompt follow-up with new digital donors.</li>
+          <li>Pilot a peer-to-peer fundraising initiative if timing, capacity and audience readiness support it.</li>
+          <li>Establish a baseline dashboard for donor retention, acquisition and giving performance.</li>
+        </ul>
+      </div>
+      <div class="data-card">
+        <div class="dc-title">May to July 2027</div>
+        <div class="dc-meta">Deepen relationships and optimize acquisition</div>
+        <ul class="bullets cap-list">
+          <li>Evaluate capital donor retention and conversion into annual operating support.</li>
+          <li>Conduct targeted personal solicitations, donor meetings and upgrades.</li>
+          <li>Review digital campaign performance, audience quality, email acquisition and first-time gifts.</li>
+          <li>Refine messaging and targeting based on results.</li>
+          <li>Expand successful peer-to-peer tactics or prepare for a seasonal activation.</li>
+          <li>Identify major gift and planned giving prospects emerging from the annual donor base.</li>
+          <li>Review progress against fundraising goals and adjust the calendar as needed.</li>
+        </ul>
+      </div>
+      <div class="data-card">
+        <div class="dc-title">August to October 2027</div>
+        <div class="dc-meta">Year-end preparation, execution and evaluation</div>
+        <ul class="bullets cap-list">
+          <li>Prepare year-end appeals and tailored solicitations for priority donor segments.</li>
+          <li>Coordinate digital acquisition, email communications, personal outreach and peer-to-peer activity.</li>
+          <li>Confirm renewal and upgrade strategies for donors with upcoming giving opportunities.</li>
+          <li>Deliver impact communications that connect donor support to organizational outcomes.</li>
+          <li>Evaluate retention, new-donor conversion, annual giving revenue and campaign return.</li>
+          <li>Develop recommendations for the next 12-month fundraising plan.</li>
+          <li>Present results, lessons learned and resource recommendations to organizational leadership.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="report-section">
+    <div class="section-number">Development</div>
+    <div class="section-title">Recommended Measures of Success</div>
+    <div class="data-card">
+      <div class="tbl-wrap"><table>
+        <thead><tr><th>Strategic priority</th><th>Suggested output</th></tr></thead>
+        <tbody>
+          <tr><td class="strong">Capital donor retention</td><td>Percentage of eligible capital donors making a subsequent gift; number and value of new annual commitments</td></tr>
+          <tr><td class="strong">Annual giving</td><td>Unrestricted operating revenue, donor retention, renewal rate, average gift and donor upgrades</td></tr>
+          <tr><td class="strong">Digital acquisition</td><td>Cost per acquired donor, email subscribers acquired, first-time donors, conversion rate and subsequent gifts</td></tr>
+          <tr><td class="strong">Peer-to-peer fundraising</td><td>Number of participants, funds raised, new donors acquired and donor retention after the event or campaign</td></tr>
+          <tr><td class="strong">Major and planned giving</td><td>Qualified prospects identified, cultivation meetings completed and next steps established</td></tr>
+          <tr><td class="strong">Stewardship</td><td>Percentage of priority donors with plans, completed touchpoints and timely impact communications</td></tr>
+        </tbody>
+      </table></div>
+    </div>
+  </div>
+</section>
+
 <!-- ============ OVERVIEW ============ -->
-<section class="tab-panel" id="overview" role="tabpanel" aria-labelledby="tab-overview">
+<section class="tab-panel" id="overview" role="tabpanel" aria-labelledby="tab-overview" hidden>
   <div class="panel-label print-only">Overview</div>
   <div class="report-section">
     <div class="section-number">Section 1</div>
