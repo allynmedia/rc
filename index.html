@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Resource Center Year in Review — Allyn Insights</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600&family=Barlow:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --red: #CE202E;
+  --red-light: #fdeaea;
+  --dark: #111111;
+  --gray: #888A8D;
+  --gray-light: #f7f7f6;
+  --border: #e2e2e2;
+  --white: #ffffff;
+  --condensed: 'Barlow Condensed', sans-serif;
+  --body: 'Barlow', sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:var(--body);background:var(--white);color:var(--dark);font-size:15px;line-height:1.6;}
+.site-header{background:var(--dark);padding:0 32px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:200;height:60px;box-shadow:0 2px 16px rgba(0,0,0,.5);}
+@media(max-width:640px){.site-header{padding:0 16px;flex-wrap:wrap;height:auto;padding-top:10px;padding-bottom:10px;gap:8px;position:static;box-shadow:none;}}
+.logo-row{display:flex;align-items:center;gap:13px;}
+.logo-text{font-family:var(--condensed);font-weight:500;font-size:15px;color:#fff;text-transform:uppercase;letter-spacing:.08em;}
+.hc-name{font-family:var(--condensed);font-weight:500;font-size:16px;color:#fff;text-align:right;}
+.hc-period{font-size:12px;color:var(--gray);text-align:right;}
+.red-bar{height:3px;background:var(--red);}
+.print-btn{display:inline-flex;align-items:center;gap:7px;background:var(--red);color:#fff;border:none;border-radius:5px;padding:8px 16px;font-family:var(--body);font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;cursor:pointer;transition:background .15s,transform .1s;flex-shrink:0;}
+.print-btn:hover{background:#a8181f;}
+.print-btn:active{transform:scale(.97);}
+.report-cover{background:var(--white);padding:40px 0 28px;position:relative;overflow:hidden;border-bottom:1px solid var(--border);}
+@media(max-width:600px){.report-cover{padding:28px 0 20px;}.cover-inner{padding:0 16px;}}
+.cover-inner{max-width:1120px;margin:0 auto;padding:0 32px;}
+.cover-eyebrow{font-family:var(--condensed);font-size:11px;text-transform:uppercase;letter-spacing:.14em;color:var(--red);margin-bottom:12px;}
+.cover-headline{font-family:var(--condensed);font-weight:500;font-size:40px;color:var(--dark);line-height:1.08;letter-spacing:.01em;margin-bottom:10px;max-width:900px;}
+.cover-sub{font-size:15px;color:var(--gray);margin-bottom:0;}
+.cover-metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:24px;}
+@media(max-width:800px){.cover-metrics{grid-template-columns:1fr 1fr;}}
+.cm{background:var(--white);border:1px solid var(--border);border-radius:8px;padding:14px 16px;position:relative;overflow:hidden;}
+.cm::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--red);}
+.cm-val{font-family:var(--condensed);font-weight:500;font-size:28px;color:var(--dark);line-height:1;}
+.cm-label{font-size:10.5px;color:var(--gray);text-transform:uppercase;letter-spacing:.07em;margin-bottom:5px;}
+.cm-delta{font-size:12px;margin-top:4px;color:var(--gray);}
+/* Tabs */
+.tab-bar{position:sticky;top:60px;z-index:150;background:var(--white);border-bottom:1px solid var(--border);}
+.tab-list .tab:first-child{margin-left:-14px;}
+@media(max-width:640px){.tab-bar{top:0;}}
+.tab-list{max-width:1120px;margin:0 auto;padding:0 32px;display:flex;gap:4px;overflow-x:auto;scrollbar-width:none;}
+.tab-list::-webkit-scrollbar{display:none;}
+@media(max-width:600px){.tab-list{padding:0 16px;}}
+.tab{font-family:var(--condensed);font-weight:500;font-size:14px;text-transform:uppercase;letter-spacing:.08em;color:var(--gray);background:none;border:none;border-bottom:3px solid transparent;padding:14px 14px 11px;cursor:pointer;white-space:nowrap;}
+.tab:hover{color:var(--dark);}
+.tab[aria-selected="true"]{color:var(--dark);border-bottom-color:var(--red);}
+.tab:focus-visible{outline:2px solid var(--red);outline-offset:-2px;}
+.tab-panel[hidden]{display:none;}
+.print-only{display:none;}
+.report-body{max-width:1120px;margin:0 auto;padding:0 32px 48px;}
+@media(max-width:600px){.report-body{padding:0 16px 40px;}}
+.report-section{padding:40px 0 0;border-top:1px solid var(--border);margin-top:40px;}
+.panel-label + .report-section{border-top:none;margin-top:0;}
+.section-number{font-family:var(--condensed);font-size:11px;text-transform:uppercase;letter-spacing:.14em;color:var(--red);margin-bottom:6px;}
+.section-title{font-family:var(--condensed);font-weight:500;font-size:28px;color:var(--dark);letter-spacing:.01em;margin-bottom:20px;line-height:1.15;}
+.prose{font-size:15px;line-height:1.75;color:#333;max-width:760px;}
+.prose p{margin-bottom:16px;}
+.prose p:last-child{margin-bottom:0;}
+.prose strong{color:var(--dark);font-weight:700;}
+.bullets{list-style:none;max-width:860px;}
+.bullets li{position:relative;padding:10px 0 10px 22px;border-bottom:1px solid #f2f2f0;font-size:15px;color:#333;}
+.bullets li:last-child{border-bottom:none;}
+.bullets li::before{content:'';position:absolute;left:0;top:19px;width:8px;height:8px;background:var(--red);}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:8px;align-items:start;}
+.split-3-2{display:grid;grid-template-columns:3fr 2fr;gap:24px;margin-top:8px;align-items:start;}
+@media(max-width:800px){.split,.split-3-2{grid-template-columns:1fr;}}
+.data-card{background:var(--white);border:1px solid var(--border);border-radius:8px;padding:18px 20px;}
+.dc-title{font-family:var(--condensed);font-weight:500;font-size:11px;text-transform:uppercase;letter-spacing:.09em;color:var(--dark);margin-bottom:14px;display:flex;align-items:center;gap:7px;}
+.dc-title::before{content:'';display:inline-block;width:7px;height:7px;background:var(--red);flex-shrink:0;}
+.dc-meta{font-size:12px;color:var(--gray);text-transform:uppercase;letter-spacing:.06em;margin:-8px 0 12px;}
+.dc-label{font-family:var(--condensed);font-weight:500;font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--red);margin:12px 0 4px;}
+.dc-text{font-size:14px;color:#444;line-height:1.65;}
+.kpi-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:4px;margin-bottom:20px;}
+.kpi-strip.three{grid-template-columns:repeat(3,1fr);}
+@media(max-width:800px){.kpi-strip,.kpi-strip.three{grid-template-columns:repeat(2,1fr);}}
+.kpi{background:var(--white);border:1px solid var(--border);border-radius:8px;padding:14px 16px;position:relative;overflow:hidden;}
+.kpi::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--red);}
+.kpi-label{font-size:11px;color:var(--gray);text-transform:uppercase;letter-spacing:.08em;margin-bottom:5px;}
+.kpi-value{font-family:var(--condensed);font-weight:500;font-size:26px;line-height:1;color:var(--dark);}
+.kpi-value.tbd{color:var(--gray);}
+.kpi-sub{font-size:12px;margin-top:4px;color:var(--gray);}
+.tbl-wrap{overflow-x:auto;margin-top:2px;}
+table{width:100%;border-collapse:collapse;font-size:13px;}
+th{text-align:left;padding:7px 10px;color:var(--gray);font-weight:700;text-transform:uppercase;letter-spacing:.06em;border-bottom:1.5px solid var(--border);white-space:nowrap;}
+td{padding:8px 10px;border-bottom:.5px solid #f2f2f0;vertical-align:top;}
+td.strong{font-weight:700;}
+tr:last-child td{border-bottom:none;}
+tr:hover td{background:#fafafa;}
+.note{font-size:13px;color:var(--gray);line-height:1.6;margin-top:14px;padding:10px 14px;background:var(--gray-light);border-radius:5px;border-left:3px solid var(--red);}
+.tbl-cap{font-size:12.5px;color:var(--gray);line-height:1.6;margin-top:10px;}
+.rec-list{display:flex;flex-direction:column;gap:16px;margin-top:8px;}
+.rec-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:8px;}
+@media(max-width:900px){.rec-grid{grid-template-columns:1fr 1fr;}}
+@media(max-width:600px){.rec-grid{grid-template-columns:1fr;}}
+.rec-item{display:flex;gap:16px;padding:18px 20px;background:var(--white);border:1px solid var(--border);border-radius:8px;border-left:4px solid var(--red);}
+@media(max-width:500px){.rec-item{padding:14px 16px;flex-direction:column;gap:6px;}}
+.rec-num{font-family:var(--condensed);font-weight:500;font-size:22px;color:var(--red);flex-shrink:0;width:28px;padding-top:1px;}
+.rec-title{font-family:var(--condensed);font-weight:500;font-size:16px;text-transform:uppercase;letter-spacing:.04em;color:var(--dark);margin-bottom:6px;}
+.rec-text{font-size:14px;color:#444;line-height:1.7;}
+.pull-quote{border-left:4px solid var(--red);padding:14px 20px;margin:24px 0 0;background:var(--red-light);border-radius:0 6px 6px 0;max-width:860px;}
+.pq-text{font-size:16px;font-weight:700;color:var(--dark);line-height:1.5;}
+.cap-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:8px;}
+@media(max-width:900px){.cap-grid{grid-template-columns:1fr 1fr;}}
+@media(max-width:600px){.cap-grid{grid-template-columns:1fr;}}
+.cap-list li{font-size:14px;padding:7px 0 7px 18px;}
+.cap-list li::before{top:15px;width:6px;height:6px;}
+/* Timeline */
+.timeline{list-style:none;position:relative;margin-top:8px;}
+.timeline::before{content:'';position:absolute;left:7px;top:6px;bottom:6px;width:2px;background:var(--border);}
+.timeline li{position:relative;padding:0 0 22px 32px;}
+.timeline li:last-child{padding-bottom:0;}
+.timeline li::before{content:'';position:absolute;left:0;top:5px;width:16px;height:16px;border-radius:50%;background:var(--red);border:3px solid var(--white);box-shadow:0 0 0 1px var(--red);}
+.tl-date{font-family:var(--condensed);font-weight:500;font-size:12px;text-transform:uppercase;letter-spacing:.1em;color:var(--red);}
+.tl-head{font-family:var(--condensed);font-weight:500;font-size:19px;color:var(--dark);line-height:1.2;margin:2px 0 3px;}
+.tl-text{font-size:14px;color:#444;}
+/* Phase strip */
+.phases{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:16px;}
+@media(max-width:800px){.phases{grid-template-columns:1fr 1fr;}}
+.phase{border-top:3px solid var(--red);padding:12px 0 0;}
+.phase-date{font-family:var(--condensed);font-weight:500;font-size:18px;color:var(--dark);}
+.phase-text{font-size:14px;color:#444;}
+/* Bars */
+.bars{display:flex;flex-direction:column;gap:10px;}
+.bar-row{display:grid;grid-template-columns:150px 1fr 28px;gap:10px;align-items:center;font-size:13.5px;}
+.bar-track{height:12px;background:var(--gray-light);border-radius:2px;overflow:hidden;}
+.bar-fill{height:100%;background:var(--red);}
+.bar-val{font-family:var(--condensed);font-weight:500;font-size:16px;text-align:right;}
+.site-footer{background:var(--dark);padding:14px 32px;display:flex;align-items:center;justify-content:space-between;margin-top:48px;flex-wrap:wrap;gap:6px;}
+.sf-left{font-size:12px;color:var(--gray);}
+.sf-left span{color:var(--red);}
+.sf-right{font-family:var(--condensed);font-weight:500;font-size:11px;color:var(--gray);text-transform:uppercase;letter-spacing:.08em;}
+@media print {
+  .site-header, .site-footer, .tab-bar { display:none !important; }
+  @page { margin: 12mm; size: letter; }
+  body{background:#fff !important;}
+  .tab-panel[hidden]{display:block !important;}
+  .print-only{display:block;}
+  .tab-panel{break-before:page;page-break-before:always;}
+  .tab-panel:first-of-type{break-before:auto;page-break-before:auto;}
+  .panel-label{font-family:var(--condensed);font-weight:500;font-size:13px;text-transform:uppercase;letter-spacing:.14em;color:var(--red);padding-top:4px;border-bottom:2px solid var(--red);padding-bottom:4px;}
+  .section-number,.section-title,.dc-title,.panel-label{break-after:avoid;page-break-after:avoid;}
+  .cm,.kpi,.rec-item,.pull-quote,.data-card,.timeline li,.phase,.bar-row,.bullets li{break-inside:avoid;page-break-inside:avoid;}
+  tr{break-inside:avoid;page-break-inside:avoid;}
+  thead{display:table-header-group;}
+  .report-cover{padding:8px 10px 16px;}
+  .report-body{padding:0 10px 24px;}
+  .report-section{padding-top:24px;margin-top:24px;}
+  .data-card{padding:12px 12px;}
+  table{font-size:10px;}
+  th,td{padding:5px 6px;}
+  th{white-space:normal;}
+}
+</style>
+</head>
+<body>
+<header class="site-header">
+  <div class="logo-row">
+    <!-- Allyn bug: insert the official logo file here (do not recreate it) -->
+    <div class="logo-text">Allyn Insights</div>
+  </div>
+  <div style="display:flex;align-items:center;gap:20px;">
+    <div style="text-align:right;">
+      <div class="hc-name">Resource Center</div>
+      <div class="hc-period">Year in Review &mdash; Oct 2025 to Nov 2026</div>
+    </div>
+    <button class="print-btn" onclick="window.print()" title="Download as PDF">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      PDF
+    </button>
+  </div>
+</header>
+<div class="red-bar"></div>
+
+<div class="report-cover">
+  <div class="cover-inner">
+    <div class="cover-eyebrow">Allyn Insights &mdash; Year in Review</div>
+    <div class="cover-headline">Resource Center: Year in Review</div>
+    <div class="cover-sub">October 2025 to November 2026 &middot; Prepared for Cece Cox and Christopher Wagley &middot; November 10, 2026 &middot; Prepared by Allyn &middot; Confidential</div>
+    <div class="cover-metrics">
+      <div class="cm"><div class="cm-label">News Coverage</div><div class="cm-val">31</div><div class="cm-delta">News stories across 12 outlets</div></div>
+      <div class="cm"><div class="cm-label">RC Health Calls</div><div class="cm-val">1,600</div><div class="cm-delta">Calls from Google Ads</div></div>
+      <div class="cm"><div class="cm-label">Award Nominations</div><div class="cm-val">7</div><div class="cm-delta">Submitted for Cece; D CEO award won</div></div>
+      <div class="cm"><div class="cm-label">Website</div><div class="cm-val">29</div><div class="cm-delta">Pages rebuilt on a new design system</div></div>
+    </div>
+  </div>
+</div>
+
+<nav class="tab-bar" aria-label="Report sections">
+  <div class="tab-list" role="tablist">
+    <button class="tab" role="tab" id="tab-overview" aria-controls="overview" aria-selected="true">Overview</button>
+    <button class="tab" role="tab" id="tab-pr" aria-controls="pr" aria-selected="false" tabindex="-1">PR</button>
+    <button class="tab" role="tab" id="tab-digital" aria-controls="digital" aria-selected="false" tabindex="-1">Digital</button>
+    <button class="tab" role="tab" id="tab-development" aria-controls="development" aria-selected="false" tabindex="-1">Development</button>
+    <button class="tab" role="tab" id="tab-ahead" aria-controls="ahead" aria-selected="false" tabindex="-1">Looking Ahead</button>
+    <button class="tab" role="tab" id="tab-capabilities" aria-controls="capabilities" aria-selected="false" tabindex="-1">Allyn Capabilities</button>
+  </div>
+</nav>
+
+<main class="report-body">
+
+<!-- ============ OVERVIEW ============ -->
+<section class="tab-panel" id="overview" role="tabpanel" aria-labelledby="tab-overview">
+  <div class="panel-label print-only">Overview</div>
+  <div class="report-section">
+    <div class="section-number">Section 1</div>
+    <div class="section-title">Executive Summary</div>
+    <ul class="bullets">
+      <li>Allyn ran communications for the CEO transition, from Cece's retirement announcement to Christopher's first week</li>
+      <li>Resource Center appeared in 31 news stories across 12 outlets</li>
+      <li>Provided counsel for PR strategies related to adverse media inquiries</li>
+      <li>Allyn submitted 7 award nominations; Cece won <em>D CEO</em>'s Community Impact Award</li>
+      <li>Paid media drove 1,600 calls to Resource Center Health and 1,019 Toast to Life clicks</li>
+      <li>29 website pages were rebuilt on a new design system</li>
+      <li>Development efforts led the Our Health Our Community campaign and supported the Cece Cox Legacy Fund, which raised $600,000 against a $500,000 goal</li>
+      <li>Next: honor Cece, introduce Christopher and build toward Toast to Life 2027</li>
+    </ul>
+  </div>
+
+  <div class="report-section">
+    <div class="section-number">Section 2</div>
+    <div class="section-title">Two New Buildings: Oak Lawn Place in 2024 and Resource Center Health in 2026</div>
+    <div class="split">
+      <div class="data-card">
+        <div class="dc-title">Oak Lawn Place</div>
+        <div class="dc-meta">Opened Sept 10, 2024</div>
+        <div class="dc-label">What Allyn delivered</div>
+        <div class="dc-text">Event logistics and media: advisory, press release, media list and monitoring, road closure, program and podium</div>
+        <div class="dc-label">Results</div>
+        <div class="dc-text">2026 TxA Design Award; LGBTQ-affirming senior housing with an 18-month waitlist</div>
+      </div>
+      <div class="data-card">
+        <div class="dc-title">Resource Center Health</div>
+        <div class="dc-meta">Ribbon cutting May 5, 2026</div>
+        <div class="dc-label">What Allyn delivered</div>
+        <div class="dc-text">Invitations and media alert, pre-opening video and photography, script writing, donor engagement tours, Google Ads campaign</div>
+        <div class="dc-label">Results</div>
+        <div class="dc-text">NBC 5, CBS 11, <em>Dallas Voice</em> and <em>North Dallas Gazette</em>; ads drove 1,600 calls</div>
+      </div>
+    </div>
+    <p class="tbl-cap">Oak Lawn Place opened before the October 2025 start of this review period and is included because of its significance.</p>
+  </div>
+</section>
+
+<!-- ============ LEADERSHIP & PR ============ -->
+<section class="tab-panel" id="pr" role="tabpanel" aria-labelledby="tab-pr" hidden>
+  <div class="panel-label print-only">PR</div>
+  <div class="report-section">
+    <div class="section-number">Section 3</div>
+    <div class="section-title">The CEO Transition, from Cece's Announcement to Christopher's First Week</div>
+    <ol class="timeline">
+      <li><div class="tl-date">Feb 25, 2026</div><div class="tl-head">Cece announces retirement</div><div class="tl-text">Comms calendar; release shared with search firm</div></li>
+      <li><div class="tl-date">Jul 8, 2026</div><div class="tl-head">Christopher named CEO</div><div class="tl-text">Release, donor communications, social posts, web banner</div></li>
+      <li><div class="tl-date">Oct 2026</div><div class="tl-head">Board Chair transition</div><div class="tl-text">Release on Calvert Collins-Bratton and board</div></li>
+      <li><div class="tl-date">Nov 2, 2026</div><div class="tl-head">Christopher's first day</div><div class="tl-text">Press release; new Media Center listing</div></li>
+      <li><div class="tl-date">Nov 6&ndash;9, 2026</div><div class="tl-head">Community Center renamed</div><div class="tl-text">Sign reveal video; release Nov 9</div></li>
+    </ol>
+  </div>
+
+  <div class="report-section">
+    <div class="section-number">Section 4</div>
+    <div class="section-title">Resource Center Appeared in 31 News Stories across 12 Outlets</div>
+    <div class="kpi-strip three">
+      <div class="kpi"><div class="kpi-label">News Stories</div><div class="kpi-value">31</div><div class="kpi-sub">Oct 2025 to Nov 2026</div></div>
+      <div class="kpi"><div class="kpi-label">Outlets</div><div class="kpi-value">12</div><div class="kpi-sub">Print, online and broadcast</div></div>
+      <div class="kpi"><div class="kpi-label">TV Stations</div><div class="kpi-value">3</div><div class="kpi-sub">WFAA, NBC 5, CBS 11</div></div>
+    </div>
+    <div class="data-card">
+      <div class="dc-title">Stories by theme</div>
+      <div class="bars">
+        <div class="bar-row"><span>Events and honors</span><div class="bar-track"><div class="bar-fill" style="width:100%"></div></div><span class="bar-val">10</span></div>
+        <div class="bar-row"><span>Leadership transition</span><div class="bar-track"><div class="bar-fill" style="width:70%"></div></div><span class="bar-val">7</span></div>
+        <div class="bar-row"><span>Health care and HIV</span><div class="bar-track"><div class="bar-fill" style="width:70%"></div></div><span class="bar-val">7</span></div>
+        <div class="bar-row"><span>Program changes</span><div class="bar-track"><div class="bar-fill" style="width:30%"></div></div><span class="bar-val">3</span></div>
+        <div class="bar-row"><span>Other</span><div class="bar-track"><div class="bar-fill" style="width:30%"></div></div><span class="bar-val">3</span></div>
+        <div class="bar-row"><span>Data breach</span><div class="bar-track"><div class="bar-fill" style="width:10%"></div></div><span class="bar-val">1</span></div>
+      </div>
+    </div>
+    <p class="tbl-cap">Counts include all coverage of Resource Center during the period, not only Allyn-placed stories.</p>
+  </div>
+
+  <div class="report-section">
+    <div class="section-number">Section 5</div>
+    <div class="section-title">Cece Earned Five Honors in 2026, One from an Allyn Nomination</div>
+    <div class="split-3-2">
+      <div class="data-card">
+        <div class="dc-title">Honors</div>
+        <div class="tbl-wrap"><table>
+          <thead><tr><th>Honor</th><th>Given by</th><th>Date</th></tr></thead>
+          <tbody>
+            <tr><td class="strong">Visibility Award</td><td>Black Tie Dinner</td><td>Nov 2026</td></tr>
+            <tr><td class="strong">Lifetime Champion</td><td>Girl Scouts of Northeast Texas</td><td>2026</td></tr>
+            <tr><td class="strong">Community Impact Award</td><td><em>D CEO</em> and Communities Foundation of Texas</td><td>Jul 2026</td></tr>
+            <tr><td class="strong">Leadership in Health and Human Services</td><td>City of Dallas</td><td>Jun 2026</td></tr>
+            <tr><td class="strong">TxA Design Award (Oak Lawn Place)</td><td>Texas Society of Architects</td><td>Apr 2026</td></tr>
+          </tbody>
+        </table></div>
+      </div>
+      <div class="data-card">
+        <div class="dc-title">7 nominations by Allyn</div>
+        <ul class="bullets" style="font-size:14px">
+          <li><em>D CEO</em> Nonprofit Awards (won)</li>
+          <li>Visit Dallas Cause She Can</li>
+          <li><em>D CEO</em> Leadership Excellence</li>
+          <li><em>D CEO</em> Excellence in Healthcare</li>
+          <li>NTX Commission Regional Leadership</li>
+          <li>Juanita Craft Humanitarian Award</li>
+          <li>Dallas County World AIDS Day Awards</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="report-section">
+    <div class="section-number">Section 6</div>
+    <div class="section-title"><em>D Magazine</em>: Paid Articles Opened the Door to Earned Coverage</div>
+    <div class="split">
+      <div class="data-card">
+        <div class="dc-title">Sponsored series</div>
+        <div class="dc-meta">3 paid articles, Dec 2025 to May 2026</div>
+        <ul class="bullets cap-list">
+          <li>Dallas Resource Center Health Brings Care and Connection Under One Roof (Dec 2025)</li>
+          <li>6 Questions That Explain the Changing Face of HIV in Dallas (Mar 2026)</li>
+          <li>How Did LGBTQIA+ Community Health Services in Dallas Grow Into What They Are Today (May 2026)</li>
+        </ul>
+        <p class="tbl-cap">630k+ impressions; about 2,950 readers; articles stay live</p>
+      </div>
+      <div class="data-card">
+        <div class="dc-title">Earned coverage that followed</div>
+        <div class="dc-meta"><em>D Magazine</em> and <em>D CEO</em> kept covering RC</div>
+        <ul class="bullets cap-list">
+          <li>The Long Arc of Cece Cox's Impact on Dallas, <em>D Magazine</em> profile (Jun 2026)</li>
+          <li>Community Impact Award for Cece, <em>D CEO</em> Nonprofit Awards (Jul 2026)</li>
+          <li>Cece Cox essay on belonging, <em>D CEO</em> (2026)</li>
+        </ul>
+        <p class="tbl-cap">A profile, an award and a byline in the same outlets</p>
+      </div>
+    </div>
+    <div class="note">Sponsored articles introduced RC Health to <em>D Magazine</em> readers; editorial coverage in the same outlets followed.</div>
+    <p class="tbl-cap">Sources: <em>D Magazine</em> branded content recap (May 2026); RC news coverage scan, Oct 2025 to Oct 2026. Reader count sums unique users per article.</p>
+  </div>
+</section>
+
+<!-- ============ DIGITAL & WEB ============ -->
+<section class="tab-panel" id="digital" role="tabpanel" aria-labelledby="tab-digital" hidden>
+  <div class="panel-label print-only">Digital</div>
+  <div class="report-section">
+    <div class="section-number">Section 7</div>
+    <div class="section-title">Digital Reach, October 2025 to October 2026</div>
+    <div class="kpi-strip">
+      <div class="kpi"><div class="kpi-label">New Website Users</div><div class="kpi-value">~109K</div><div class="kpi-sub">Excluding automated traffic (see note)</div></div>
+      <div class="kpi"><div class="kpi-label">Dallas Visitors</div><div class="kpi-value">29K</div><div class="kpi-sub">Active users from Dallas</div></div>
+      <div class="kpi"><div class="kpi-label">Social Engagement</div><div class="kpi-value">35,299</div><div class="kpi-sub">Engagements on Facebook and Instagram</div></div>
+      <div class="kpi"><div class="kpi-label">Paid Search Conversion</div><div class="kpi-value">5.89%</div><div class="kpi-sub">Of paid search clicks led to an appointment request, call or donation</div></div>
+    </div>
+    <div class="split">
+      <div class="data-card">
+        <div class="dc-title">Where new users came from</div>
+        <div class="bars">
+          <div class="bar-row"><span>Organic search</span><div class="bar-track"><div class="bar-fill" style="width:100%"></div></div><span class="bar-val">36.5K</span></div>
+          <div class="bar-row"><span>Paid search</span><div class="bar-track"><div class="bar-fill" style="width:16%"></div></div><span class="bar-val">5.8K</span></div>
+          <div class="bar-row"><span>Paid social</span><div class="bar-track"><div class="bar-fill" style="width:11.5%"></div></div><span class="bar-val">4.2K</span></div>
+          <div class="bar-row"><span>Referral</span><div class="bar-track"><div class="bar-fill" style="width:9.7%"></div></div><span class="bar-val">3.5K</span></div>
+          <div class="bar-row"><span>Organic social</span><div class="bar-track"><div class="bar-fill" style="width:8.8%"></div></div><span class="bar-val">3.2K</span></div>
+          <div class="bar-row"><span>Email</span><div class="bar-track"><div class="bar-fill" style="width:6.8%"></div></div><span class="bar-val">2.5K</span></div>
+          <div class="bar-row"><span>AI assistants</span><div class="bar-track"><div class="bar-fill" style="width:1%"></div></div><span class="bar-val">343</span></div>
+        </div>
+      </div>
+      <div class="data-card">
+        <div class="dc-title">Top pages from Google search</div>
+        <div class="tbl-wrap"><table>
+          <thead><tr><th>Page</th><th>Clicks</th><th>Impressions</th></tr></thead>
+          <tbody>
+            <tr><td>Homepage</td><td class="strong">12,359</td><td>278,701</td></tr>
+            <tr><td>Gaybingo event page</td><td class="strong">6,203</td><td>186,205</td></tr>
+            <tr><td>Careers</td><td class="strong">1,990</td><td>61,637</td></tr>
+            <tr><td>Health</td><td class="strong">1,426</td><td>111,470</td></tr>
+            <tr><td>The Facts Behind the Texas Bathroom Bill</td><td class="strong">1,355</td><td>101,529</td></tr>
+          </tbody>
+        </table></div>
+        <p class="tbl-cap">40,023 clicks from 3.34M impressions in Google search overall.</p>
+      </div>
+    </div>
+    <div class="data-card" style="margin-top:16px">
+      <div class="dc-title">Top Texas cities by active users</div>
+      <div class="tbl-wrap"><table>
+        <thead><tr><th>City</th><th>Active users</th></tr></thead>
+        <tbody>
+          <tr><td class="strong">Dallas</td><td>29.0K</td></tr>
+          <tr><td class="strong">Fort Worth</td><td>4.3K</td></tr>
+          <tr><td class="strong">Houston</td><td>2.4K</td></tr>
+        </tbody>
+      </table></div>
+    </div>
+    <div class="note">Google Analytics recorded 220,043 new users in this period, but about 111,000 were automated visits from Singapore, Hong Kong, Ashburn (Virginia) and Urumqi, with near-zero engagement. They are removed from the new-user total above; direct traffic (163,000 new users) is left out of the channel chart because most of the automated visits landed there. Resource Center should add a bot filter in Google Analytics.</div>
+    <p class="tbl-cap">Source: Google Analytics 4 and Google Search Console data in Google Analytics, Oct 1, 2025 to Oct 31, 2026.</p>
+  </div>
+
+  <div class="report-section">
+    <div class="section-number">Section 8</div>
+    <div class="section-title">Social Media: 582 Posts and a 6.86% Engagement Rate</div>
+    <div class="kpi-strip">
+      <div class="kpi"><div class="kpi-label">Posts Published</div><div class="kpi-value">582</div><div class="kpi-sub">Facebook and Instagram</div></div>
+      <div class="kpi"><div class="kpi-label">Post Impressions</div><div class="kpi-value">597,187</div><div class="kpi-sub">Oct 1, 2025 to Oct 31, 2026</div></div>
+      <div class="kpi"><div class="kpi-label">Engagement Rate</div><div class="kpi-value">6.86%</div><div class="kpi-sub">Average per post</div></div>
+      <div class="kpi"><div class="kpi-label">Followers</div><div class="kpi-value">19,142</div><div class="kpi-sub">Total across accounts, Oct 31, 2026</div></div>
+    </div>
+    <div class="split">
+      <div class="data-card">
+        <div class="dc-title">Engagement detail</div>
+        <div class="tbl-wrap"><table>
+          <thead><tr><th>Metric</th><th>Total</th></tr></thead>
+          <tbody>
+            <tr><td>Total engagement</td><td class="strong">35,299</td></tr>
+            <tr><td>Video views (Facebook)</td><td class="strong">51,853</td></tr>
+            <tr><td>Reactions and likes</td><td class="strong">15,564</td></tr>
+            <tr><td>Shares</td><td class="strong">1,580</td></tr>
+            <tr><td>Link clicks (Facebook)</td><td class="strong">1,554</td></tr>
+            <tr><td>Comments and replies</td><td class="strong">790</td></tr>
+          </tbody>
+        </table></div>
+      </div>
+      <div class="data-card">
+        <div class="dc-title">Top posts by engagement</div>
+        <div class="tbl-wrap"><table>
+          <thead><tr><th>Post</th><th>Engagement</th></tr></thead>
+          <tbody>
+            <tr><td>Oak Lawn rainbow crosswalks video (Oct 2025)</td><td class="strong">6,245</td></tr>
+            <tr><td>Gaybingo recap video (Oct 2025)</td><td class="strong">1,735</td></tr>
+            <tr><td>Resource Center Health grand opening (May 2026)</td><td class="strong">1,415</td></tr>
+          </tbody>
+        </table></div>
+      </div>
+    </div>
+    <p class="tbl-cap">Source: Hootsuite Analytics, Facebook page "Resource Center" and Instagram "myresourcectr," Oct 1, 2025 to Oct 31, 2026. Video views and link clicks are Facebook only; Hootsuite does not report them for Instagram.</p>
+  </div>
+
+  <div class="report-section">
+    <div class="section-number">Section 9</div>
+    <div class="section-title">Paid Search: Appointment and Donate Links Drive Most Conversions</div>
+    <div class="kpi-strip">
+      <div class="kpi"><div class="kpi-label">Click-Through Rate</div><div class="kpi-value">4.82%</div><div class="kpi-sub">Overall</div></div>
+      <div class="kpi"><div class="kpi-label">Conversion Rate</div><div class="kpi-value">5.89%</div><div class="kpi-sub">Appointment requests, calls and donations</div></div>
+      <div class="kpi"><div class="kpi-label">Top Two Links</div><div class="kpi-value">~78%</div><div class="kpi-sub">Of conversions came from Request an Appointment and Donate</div></div>
+      <div class="kpi"><div class="kpi-label">Geo-Targeting</div><div class="kpi-value">100%</div><div class="kpi-sub">Of 215,580 impressions served in Dallas County</div></div>
+    </div>
+    <div class="split">
+      <div class="data-card">
+        <div class="dc-title">Best-performing ad elements</div>
+        <div class="tbl-wrap"><table>
+          <thead><tr><th>Element</th><th>CTR</th></tr></thead>
+          <tbody>
+            <tr><td>"Request an Appointment" link</td><td class="strong">30.95%</td></tr>
+            <tr><td>"Donate" link (Support LGBTQIA+ programs in Dallas)</td><td class="strong">22.43%</td></tr>
+            <tr><td>Click-to-call</td><td class="strong">9.61%</td></tr>
+            <tr><td>"Resource Center Health provides inclusive, compassionate care. Book online now."</td><td class="strong">8.65%</td></tr>
+            <tr><td>"Resource Center Health" headline</td><td class="strong">7.49%</td></tr>
+          </tbody>
+        </table></div>
+      </div>
+      <div class="data-card">
+        <div class="dc-title">When people book</div>
+        <ul class="bullets cap-list">
+          <li>Peaks at 8 to 11 AM, 11 AM to 1 PM and 1 to 3 PM</li>
+          <li>Busiest Tuesday through Friday</li>
+          <li>Mostly on mobile</li>
+        </ul>
+      </div>
+    </div>
+    <p class="tbl-cap">Source: Google Ads, Performance Max campaign, campaign totals. The campaign ended before October 2026.</p>
+  </div>
+
+  <div class="report-section">
+    <div class="section-number">Section 10</div>
+    <div class="section-title">Sponsored Content: Three <em>D Magazine</em> Features</div>
+    <div class="kpi-strip">
+      <div class="kpi"><div class="kpi-label">Impressions</div><div class="kpi-value">630K+</div><div class="kpi-sub">Dec 3, 2025 to May 8, 2026</div></div>
+      <div class="kpi"><div class="kpi-label">Pageviews</div><div class="kpi-value">3,453</div><div class="kpi-sub">Across three features</div></div>
+      <div class="kpi"><div class="kpi-label">Unique Readers</div><div class="kpi-value">2,959</div><div class="kpi-sub">Much of it from social and private sharing</div></div>
+      <div class="kpi"><div class="kpi-label">Features</div><div class="kpi-value">3</div><div class="kpi-sub">Still live on dmagazine.com</div></div>
+    </div>
+    <div class="data-card">
+      <div class="tbl-wrap"><table>
+        <thead><tr><th>Feature</th><th>Published</th><th>Impressions</th><th>Pageviews</th></tr></thead>
+        <tbody>
+          <tr><td class="strong">Dallas Resource Center Health Brings Care and Connection Under One Roof</td><td>Dec 3, 2025</td><td>236K+</td><td>1,316</td></tr>
+          <tr><td class="strong">6 Questions That Explain the Changing Face of HIV in Dallas</td><td>Mar 10, 2026</td><td>235K+</td><td>1,226</td></tr>
+          <tr><td class="strong">How Did LGBTQIA+ Community Health Services in Dallas Grow Into What They Are Today</td><td>May 8, 2026</td><td>159K+</td><td>911</td></tr>
+        </tbody>
+      </table></div>
+    </div>
+    <p class="tbl-cap">Source: <em>D Magazine</em> branded content recap, May 2026.</p>
+  </div>
+  <div class="report-section">
+    <div class="section-number">Section 11</div>
+    <div class="section-title">RC Health Advertising across Four Channels</div>
+    <div class="kpi-strip">
+      <div class="kpi"><div class="kpi-label">Google Ads</div><div class="kpi-value">1,600</div><div class="kpi-sub">Calls from ads; 147 appointment actions</div></div>
+      <div class="kpi"><div class="kpi-label"><em>D Magazine</em></div><div class="kpi-value">630k+</div><div class="kpi-sub">Impressions; 3 branded articles introduced RC Health to <em>D Magazine</em> readers; 3,453 pageviews</div></div>
+      <div class="kpi"><div class="kpi-label"><em>Dallas Voice</em></div><div class="kpi-value">12</div><div class="kpi-sub">Ad placements: 3 print ads, 3 banners (2 e-blast, 1 homepage leaderboard) and 6 sponsored posts to 50K followers, May to Oct 2025</div></div>
+      <div class="kpi"><div class="kpi-label">Social Media Ads</div><div class="kpi-value">4.2K</div><div class="kpi-sub">New site visitors from paid social, Oct 2025 to Oct 2026, per Google Analytics</div></div>
+    </div>
+    <p class="tbl-cap">Sources: RC Health Digital Update (Dec 2025); <em>D Magazine</em> branded content recap (May 2026); Google Analytics, Oct 1, 2025 to Oct 31, 2026.</p>
+  </div>
+
+  <div class="report-section">
+    <div class="section-number">Section 12</div>
+    <div class="section-title">The Website Moved to a New Design System, a Media Center and Easier Updates</div>
+    <div class="rec-grid">
+      <div class="rec-item"><div class="rec-num">01</div><div><div class="rec-title">29 pages rebuilt</div><div class="rec-text">New hero system, type scale and header</div></div></div>
+      <div class="rec-item"><div class="rec-num">02</div><div><div class="rec-title">Media Center</div><div class="rec-text">Press releases, brand assets and a media request form (launching)</div></div></div>
+      <div class="rec-item"><div class="rec-num">03</div><div><div class="rec-title">Community Wellness</div><div class="rec-text">New program page, updated Oct 2025</div></div></div>
+      <div class="rec-item"><div class="rec-num">04</div><div><div class="rec-title">Events feed</div><div class="rec-text">Eventbrite events pulled into site pages</div></div></div>
+      <div class="rec-item"><div class="rec-num">05</div><div><div class="rec-title">Email platform move</div><div class="rec-text">MailChimp to EveryAction: templates, tags, list cleanup</div></div></div>
+      <div class="rec-item"><div class="rec-num">06</div><div><div class="rec-title">Nutrition Center</div><div class="rec-text">Recipe library with dietary filters, Recipe of the Week and staff uploads</div></div></div>
+    </div>
+  </div>
+
+  <div class="report-section">
+    <div class="section-number">Section 13</div>
+    <div class="section-title">Toast to Life Display Ads Beat Their Click Goal by 1.86x</div>
+    <p class="tbl-cap" style="margin:-10px 0 16px">Programmatic display, Oct 24 to 31, 2026; $3,000 budget fully delivered</p>
+    <div class="kpi-strip">
+      <div class="kpi"><div class="kpi-label">Impressions</div><div class="kpi-value">547,140</div><div class="kpi-sub">Oct 24 to 31, 2026</div></div>
+      <div class="kpi"><div class="kpi-label">Clicks</div><div class="kpi-value">1,019</div><div class="kpi-sub">At $2.94 each</div></div>
+      <div class="kpi"><div class="kpi-label">Click-Through Rate</div><div class="kpi-value">0.186%</div><div class="kpi-sub">1.86x the 0.10% goal</div></div>
+      <div class="kpi"><div class="kpi-label">Event Audience CTR</div><div class="kpi-value">0.362%</div><div class="kpi-sub">On the event-targeted audience</div></div>
+    </div>
+    <div class="note">Next: retarget the 1,019 people who clicked, ahead of the April 3, 2027 gala.</div>
+  </div>
+  <div class="report-section">
+    <div class="section-number">Section 14</div>
+    <div class="section-title">Where the Momentum Goes Next</div>
+    <ul class="bullets">
+      <li>Shift more search spending toward the messages that convert best</li>
+      <li>Expand geo-targeting into neighboring counties</li>
+      <li>Produce more educational search content</li>
+      <li>Pursue more sponsored placements</li>
+      <li>Reach suburban residents, supported by virtual visits through the existing booking system</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ DEVELOPMENT ============ -->
+<section class="tab-panel" id="development" role="tabpanel" aria-labelledby="tab-development" hidden>
+  <div class="panel-label print-only">Development</div>
+  <div class="report-section">
+    <div class="section-number">Section 15</div>
+    <div class="section-title">The $12M Capital Campaign Is 90% Complete</div>
+    <div class="rec-list">
+      <div class="rec-item"><div class="rec-num">01</div><div><div class="rec-title">Capital campaign</div><div class="rec-text">Gift strategy, ask amounts and wealth screenings for the $12M campaign; goal to close by January 2027</div></div></div>
+      <div class="rec-item"><div class="rec-num">02</div><div><div class="rec-title">Our Health Our Community Advisory Council</div><div class="rec-text">Led bi-monthly meetings and quarterly one-on-ones; supported member-hosted events</div></div></div>
+      <div class="rec-item"><div class="rec-num">03</div><div><div class="rec-title">Development team counsel</div><div class="rec-text">Ongoing advice to Sonya's team on solicitations, gift sizing and timelines</div></div></div>
+      <div class="rec-item"><div class="rec-num">04</div><div><div class="rec-title">Events and transition messaging</div><div class="rec-text">Event scripts, Party in a Box events and donor messaging on the CEO transition</div></div></div>
+      <div class="rec-item"><div class="rec-num">05</div><div><div class="rec-title">Legacy giving</div><div class="rec-text">Worked with the team to create the Cece Cox Legacy Fund, focused on legacy giving; raised $600,000 against a $500,000 goal</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LOOKING AHEAD ============ -->
+<section class="tab-panel" id="ahead" role="tabpanel" aria-labelledby="tab-ahead" hidden>
+  <div class="panel-label print-only">Looking Ahead</div>
+  <div class="report-section">
+    <div class="section-number">Section 16</div>
+    <div class="section-title">Discussion</div>
+    <ul class="bullets">
+      <li>Which initiatives, activities or strategies delivered the greatest impact?</li>
+      <li>What practices should we continue, change or discontinue?</li>
+      <li>What insights or observations should inform our approach moving forward?</li>
+    </ul>
+  </div>
+
+  <div class="report-section">
+    <div class="section-number">Section 17</div>
+    <div class="section-title">Through January: Honor Cece and Introduce Christopher</div>
+    <div class="split-3-2">
+      <div class="data-card">
+        <div class="dc-title">Communications and events</div>
+        <div class="tbl-wrap"><table>
+          <thead><tr><th>When</th><th>Communications and events</th></tr></thead>
+          <tbody>
+            <tr><td class="strong">Nov 14</td><td>Black Tie Dinner Visibility Award for Cece</td></tr>
+            <tr><td class="strong">Nov 30</td><td>Release: Dr. Rachel Rivera starts; sees patients Dec 7</td></tr>
+            <tr><td class="strong">Nov</td><td>WFAA pitch: Christopher as new CEO</td></tr>
+            <tr><td class="strong">Dec 1</td><td>County Commissioners Court resolution for Cece</td></tr>
+            <tr><td class="strong">Dec</td><td>Record Deconstructing Dallas episode (airs Jan)</td></tr>
+            <tr><td class="strong">Jan</td><td><em>Dallas Voice</em> cover feature for Cece</td></tr>
+            <tr><td class="strong">Jan</td><td>Christopher in <em>DBJ</em> People on the Move and <em>D CEO</em> personnel moves</td></tr>
+            <tr><td class="strong">Late Jan</td><td>Allyn happy hour honoring Christopher</td></tr>
+          </tbody>
+        </table></div>
+      </div>
+      <div class="data-card">
+        <div class="dc-title">Digital and web</div>
+        <ul class="bullets" style="font-size:14px">
+          <li>Retarget Toast to Life clickers ahead of April 3</li>
+          <li>Pharmacy marketing plan launch</li>
+          <li>Homepage refresh</li>
+          <li>Media Center goes live</li>
+          <li>Homepage heatmap to guide updates</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="report-section">
+    <div class="section-number">Section 18</div>
+    <div class="section-title">2027 PR: Christopher's Voice and Spanish-Language Reach</div>
+    <ul class="bullets">
+      <li>Position Christopher as an expert: <em>DBJ</em> People on the Move and <em>D CEO</em> personnel moves in January</li>
+      <li>Op-eds and interviews on current issues</li>
+      <li>Spanish-language media, with Dr. Rivera as a bilingual RC Health spokesperson</li>
+      <li>New women's health programs at RC Health in early 2027</li>
+      <li>Name a spokesperson for the Community Center</li>
+      <li>Use sponsored articles to open doors for earned coverage</li>
+    </ul>
+  </div>
+
+  <div class="report-section">
+    <div class="section-number">Section 19</div>
+    <div class="section-title">FY27 Digital Plan: $75K, Every Channel Tied to a Goal</div>
+    <div class="data-card">
+      <div class="tbl-wrap"><table>
+        <thead><tr><th>Channel</th><th>What we run</th><th>Goal</th><th>When</th><th>Budget</th></tr></thead>
+        <tbody>
+          <tr><td class="strong">Google search ads</td><td>RC Health, pharmacy, PrEP and testing searches; check Google Ad Grants eligibility</td><td>Appointments</td><td>Always on</td><td class="strong">$16K</td></tr>
+          <tr><td class="strong">Social ads (Meta)</td><td>Patient stories, events and Christopher's introduction; retarget site visitors</td><td>Appointments, awareness</td><td>Always on, plus bursts</td><td class="strong">$10K</td></tr>
+          <tr><td class="strong">Community discovery</td><td>TikTok Spark Ads, Instagram Reels and a Reddit pilot for young adults 18+ in DFW</td><td>Program sign-ups</td><td>Always on; 90-day Reddit pilot</td><td class="strong">$10K</td></tr>
+          <tr><td class="strong">Simpli.fi</td><td>Connected TV video ad (RC Health :30 spot), event targeting, geofencing and site retargeting</td><td>Awareness, gala, year-end gifts</td><td>CTV quarterly, plus gala and year-end</td><td class="strong">$18K</td></tr>
+          <tr><td class="strong">Sponsored content</td><td>Evergreen <em>D Magazine</em> and <em>D CEO</em> articles (donors, RC Health, women's health); <em>Dallas Voice</em> digital, KERA underwriting, <em>Axios Dallas</em></td><td>New audiences, new donors</td><td>Quarterly</td><td class="strong">$18K</td></tr>
+        </tbody>
+      </table></div>
+    </div>
+    <p class="tbl-cap">FY27 runs Oct 1, 2026 to Sep 30, 2027. Channel budgets total $72K; $3K is held in reserve to shift toward what performs.</p>
+  </div>
+
+  <div class="report-section">
+    <div class="section-number">Section 20</div>
+    <div class="section-title">Four Paid Audiences, Each with Its Own Goal and Ads</div>
+    <div class="data-card">
+      <div class="tbl-wrap"><table>
+        <thead><tr><th>Audience</th><th>Goal</th><th>Platforms</th><th>Ad type</th><th>Budget</th></tr></thead>
+        <tbody>
+          <tr><td class="strong">RC Health patients (PrEP, testing, primary care)</td><td>Appointments, calls</td><td>Google search; Instagram and Facebook; Grindr and Scruff (free, testing only)</td><td>Call ads; 15-second staff Reels; Spanish versions TBD</td><td>Google $16K, plus Meta share</td></tr>
+          <tr><td class="strong">Donors (current and new, 35+)</td><td>Gala tickets, year-end gifts</td><td>Simpli.fi CTV and retargeting; <em>D Magazine</em> and <em>D CEO</em>; KERA; Facebook</td><td>:30 CTV spot; branded articles; display retargeting; underwriting</td><td>Simpli.fi $18K, sponsored $18K</td></tr>
+          <tr><td class="strong">Young adults seeking community (18 to 30)</td><td>Program and event sign-ups</td><td>TikTok, Instagram Reels, Reddit, YouTube Shorts, Google search</td><td>Staff and member videos, boosted; event posts</td><td>Community discovery $10K</td></tr>
+          <tr><td class="strong">Older LGBTQ adults (55+)</td><td>Senior program participation</td><td>Facebook, <em>Dallas Voice</em>, CTV</td><td>Simple video or image with a phone number</td><td>Meta share</td></tr>
+        </tbody>
+      </table></div>
+    </div>
+    <p class="tbl-cap">Meta's $10K is split between patients and older adults. Oak Lawn Place (waitlist), Nutrition Center, volunteers and sponsors are reached through organic and free channels. Ad production is not included in the $75K.</p>
+  </div>
+
+  <div class="report-section">
+    <div class="section-number">Section 21</div>
+    <div class="section-title">2027 Development Plan: Keep Capital Donors, Grow Operating Support, Add Digital Donors</div>
+    <div class="rec-grid">
+      <div class="rec-item"><div class="rec-num">01</div><div><div class="rec-title">Sustain capital donors</div><div class="rec-text">Segment donors and give top capital donors personal stewardship plans</div></div></div>
+      <div class="rec-item"><div class="rec-num">02</div><div><div class="rec-title">Grow operating support</div><div class="rec-text">Turn capital gifts into annual and multi-year operating support</div></div></div>
+      <div class="rec-item"><div class="rec-num">03</div><div><div class="rec-title">Digital donor pipeline</div><div class="rec-text">Allyn Development and Digital test acquisition and email growth</div></div></div>
+    </div>
+    <div class="phases">
+      <div class="phase"><div class="phase-date">Nov&ndash;Jan</div><div class="phase-text">Clean donor data, set goals</div></div>
+      <div class="phase"><div class="phase-date">Feb&ndash;Apr</div><div class="phase-text">Launch stewardship and digital tests</div></div>
+      <div class="phase"><div class="phase-date">May&ndash;Jul</div><div class="phase-text">Upgrade donors, refine targeting</div></div>
+      <div class="phase"><div class="phase-date">Aug&ndash;Oct</div><div class="phase-text">Year-end appeals and results</div></div>
+    </div>
+  </div>
+
+  <div class="report-section">
+    <div class="section-number">Section 22</div>
+    <div class="section-title">Next Steps</div>
+    <ul class="bullets">
+      <li>Confirm 2027 development goals and calendar with Sonya</li>
+      <li>Christopher: confirm December podcast recording date</li>
+      <li>Resource Center: confirm happy hour date and guest list</li>
+      <li>Confirm 2027 digital marketing plan</li>
+    </ul>
+  </div>
+</section>
+
+
+<!-- ============ CAPABILITIES ============ -->
+<section class="tab-panel" id="capabilities" role="tabpanel" aria-labelledby="tab-capabilities" hidden>
+  <div class="panel-label print-only">Allyn Capabilities</div>
+  <div class="report-section">
+    <div class="section-number">About Allyn</div>
+    <div class="section-title">Who We Are</div>
+    <div class="prose">
+      <p>For more than 40 years, Allyn has been a trusted partner to nonprofits, civic institutions and mission-driven organizations. Based in Dallas, our team of strategists, creatives and digital experts delivers public relations, political media, public affairs, advertising, social media, creative design and strategic communications.</p>
+    </div>
+    <div class="kpi-strip" style="margin-top:20px">
+      <div class="kpi"><div class="kpi-label">Experience</div><div class="kpi-value">40+ years</div><div class="kpi-sub">Serving nonprofits and causes across North Texas</div></div>
+      <div class="kpi"><div class="kpi-label">Funds Raised</div><div class="kpi-value">$500M+</div><div class="kpi-sub">Through integrated fundraising campaigns</div></div>
+      <div class="kpi"><div class="kpi-label">Nonprofit Partners</div><div class="kpi-value">100+</div><div class="kpi-sub">Served in the last decade</div></div>
+      <div class="kpi"><div class="kpi-label">Capital Campaigns</div><div class="kpi-value">Dozens</div><div class="kpi-sub">Launched and managed</div></div>
+    </div>
+  </div>
+
+  <div class="report-section">
+    <div class="section-number">What We Offer</div>
+    <div class="section-title">Allyn Capabilities</div>
+    <div class="cap-grid">
+      <div class="data-card">
+        <div class="dc-title">Communications &amp; Reputation</div>
+        <ul class="bullets cap-list">
+          <li>Public relations</li>
+          <li>Media relations and earned coverage</li>
+          <li>Crisis communication and advisory</li>
+          <li>Executive positioning and thought leadership</li>
+          <li>Op-eds and media training</li>
+          <li>Reputation management</li>
+        </ul>
+      </div>
+      <div class="data-card">
+        <div class="dc-title">Public Affairs &amp; Advocacy</div>
+        <ul class="bullets cap-list">
+          <li>Public affairs</li>
+          <li>Government relations</li>
+          <li>Political consulting</li>
+          <li>Advocacy advertising</li>
+          <li>Grassroots coalition building</li>
+          <li>Land use and zoning</li>
+          <li>Stakeholder engagement and community relations</li>
+          <li>Public opinion research and polling</li>
+        </ul>
+      </div>
+      <div class="data-card">
+        <div class="dc-title">Nonprofit Growth &amp; Funds Development</div>
+        <ul class="bullets cap-list">
+          <li>Funds development</li>
+          <li>Capital and comprehensive campaigns</li>
+          <li>Feasibility research</li>
+          <li>Board training and advisory council recruitment</li>
+          <li>Donor engagement and stewardship</li>
+          <li>Cause and candidate fundraising</li>
+        </ul>
+      </div>
+      <div class="data-card">
+        <div class="dc-title">Digital</div>
+        <ul class="bullets cap-list">
+          <li>Digital strategy</li>
+          <li>Social media strategy and content</li>
+          <li>Paid social, search and digital targeting, including geofencing</li>
+          <li>Website development</li>
+          <li>SEO, AI optimization (AIO) and generative engine optimization (GEO)</li>
+          <li>Email marketing and CRM integration</li>
+          <li>Google Ad Grant management</li>
+        </ul>
+      </div>
+      <div class="data-card">
+        <div class="dc-title">Creative</div>
+        <ul class="bullets cap-list">
+          <li>Brand development</li>
+          <li>Logo design</li>
+          <li>Graphic design</li>
+          <li>Video production</li>
+          <li>Photography</li>
+          <li>Collateral and direct mail</li>
+          <li>Event management</li>
+        </ul>
+      </div>
+      <div class="data-card">
+        <div class="dc-title">Specialty Practices</div>
+        <ul class="bullets cap-list">
+          <li>Strategic intelligence</li>
+          <li>Social justice</li>
+          <li>Conservation</li>
+          <li>Mergers and acquisitions</li>
+          <li><em>Deconstructing Dallas</em> podcast</li>
+        </ul>
+      </div>
+    </div>
+    <div class="pull-quote"><div class="pq-text">Experience + Creativity = Problem Solving</div></div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="sf-left">Prepared by <span>Allyn</span> for Resource Center &middot; Confidential</div>
+  <div class="sf-right">Experience + Creativity = Problem Solving</div>
+</footer>
+
+<script>
+(function(){
+  var tabs = Array.prototype.slice.call(document.querySelectorAll('[role="tab"]'));
+  function select(tab, focus){
+    tabs.forEach(function(t){
+      var on = t === tab;
+      t.setAttribute('aria-selected', on ? 'true' : 'false');
+      t.tabIndex = on ? 0 : -1;
+      document.getElementById(t.getAttribute('aria-controls')).hidden = !on;
+    });
+    if (focus) tab.focus();
+    try { history.replaceState(null, '', '#' + tab.getAttribute('aria-controls')); } catch(e) {}
+  }
+  tabs.forEach(function(t, i){
+    t.addEventListener('click', function(){
+      select(t, false);
+      var bar = document.querySelector('.tab-bar');
+      var top = bar.getBoundingClientRect().top + window.pageYOffset;
+      if (window.pageYOffset > top) window.scrollTo(0, top);
+    });
+    t.addEventListener('keydown', function(e){
+      var n = null;
+      if (e.key === 'ArrowRight') n = tabs[(i + 1) % tabs.length];
+      if (e.key === 'ArrowLeft') n = tabs[(i - 1 + tabs.length) % tabs.length];
+      if (e.key === 'Home') n = tabs[0];
+      if (e.key === 'End') n = tabs[tabs.length - 1];
+      if (n) { e.preventDefault(); select(n, true); }
+    });
+  });
+  var hash = location.hash.replace('#','');
+  var start = tabs.filter(function(t){ return t.getAttribute('aria-controls') === hash; })[0];
+  if (start) select(start, false);
+})();
+</script>
+</body>
+</html>
